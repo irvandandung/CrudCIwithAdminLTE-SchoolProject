@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Registration Page</title>
+  <title>DandoengInput | Registration Page</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -37,7 +37,7 @@
   <div class="register-box-body">
     <p class="login-box-msg">Masukan Inputan</p>
 
-    <form action="application/views/perintah_masukan.php" method="post">
+    <form action="<?php echo base_url()?>index.php/user/add_input" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Full name" name="fullname">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -60,6 +60,9 @@
         <!-- /.col -->
       </div>
     </form>
+    <div>
+      <a href="<?php echo base_url()?>index.php/user/go_login">login nek wis due akun</a>
+    </div>
   </div>
   <!-- /.form-box -->
 </div>
