@@ -7,15 +7,15 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="assets/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="assets/adminlte/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/adminlte/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="assets/adminlte/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/adminlte/bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="assets/adminlte/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/adminlte/dist/css/AdminLTE.min.css">
   <!-- iCheck -->
-  <link rel="stylesheet" href="assets/adminlte/plugins/iCheck/square/blue.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/adminlte/plugins/iCheck/square/blue.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,16 +39,22 @@
 
     <form action="<?php echo base_url()?>index.php/user/add_input" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Full name" name="fullname">
+        <input type="text" class="form-control" placeholder="Full name" name="fullname" required>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Username" name="username">
+        <input type="text" class="form-control" placeholder="Username" name="username" required>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="password">
+        <input type="password" class="form-control" placeholder="Password" name="password" required>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div>
+        <select name="level" required class="col-xs-8">
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+        </select>
       </div>
       <div class="row">
         <div class="col-xs-4">
@@ -69,11 +75,11 @@
 <!-- /.register-box -->
 
 <!-- jQuery 3 -->
-<script src="assets/adminlte/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="<?php echo base_url()?>assets/adminlte/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="assets/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url()?>assets/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- iCheck -->
-<script src="assets/adminlte/plugins/iCheck/icheck.min.js"></script>
+<script src="<?php echo base_url()?>assets/adminlte/plugins/iCheck/icheck.min.js"></script>
 <script>
   $(function () {
     $('input').iCheck({
