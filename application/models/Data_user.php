@@ -17,6 +17,16 @@ class Data_user extends CI_Model
 	}
 
 	public function submit($data){
+		$username = $this->input->post("username");
+		$password = $this->input->post("password");
+		$fullname = $this->input->post("fullname");
+		$level = $this->input->post("level");
+
+		$data = array(
+			'username' => $username,
+			'password' => $password,
+			'fullname' => $fullname,
+			'level' => $level);
 		$this->db->insert("user", $data);
 	}
 

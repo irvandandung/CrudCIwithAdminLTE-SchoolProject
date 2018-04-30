@@ -24,16 +24,16 @@ class User extends CI_Controller
 	}
 
 	public function add_input(){
-		$username = $this->input->post("username");
-		$password = $this->input->post("password");
-		$fullname = $this->input->post("fullname");
-		$level = $this->input->post("level");
+		// $username = $this->input->post("username");
+		// $password = $this->input->post("password");
+		// $fullname = $this->input->post("fullname");
+		// $level = $this->input->post("level");
 
-		$data = array(
-			'username' => $username,
-			'password' => $password,
-			'fullname' => $fullname,
-			'level' => $level);
+		// $data = array(
+		// 	'username' => $username,
+		// 	'password' => $password,
+		// 	'fullname' => $fullname,
+		// 	'level' => $level);
 
 		$this->Data_user->submit($data);
 		//$this->load->view("login");

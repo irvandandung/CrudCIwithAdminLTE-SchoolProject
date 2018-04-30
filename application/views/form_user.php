@@ -67,7 +67,7 @@
       </div>
     </form>
     <div>
-      <a href="<?php echo base_url()?>index.php/user/go_login">login nek wis due akun</a>
+      <a href="<?php echo base_url()?>index.php/user">Bukak tabel user</a>
     </div>
   </div>
   <!-- /.form-box -->
