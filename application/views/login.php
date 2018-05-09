@@ -36,7 +36,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Jal melbu ngonoh nek dadi</p>
 
-    <form action="../../index2.html" method="post">
+    <form action="<?php echo  base_url();?>index.php/user/go_login" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Username">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -50,7 +50,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Melbu lahh</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat">klik bae</button>
         </div>
         <!-- /.col -->
       </div>
@@ -58,8 +58,7 @@
 
     <!-- /.social-auth-links -->
 
-    <a href="#">Nyong kelalen passworde</a><br>
-    <a href="<?php echo base_url()?>" class="text-center">Gawe akun nek rung duwe</a>
+    <a href="#"></a><br>
 
   </div>
   <!-- /.login-box-body -->

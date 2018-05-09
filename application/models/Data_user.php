@@ -10,6 +10,7 @@ class Data_user extends CI_Model
 	public function __construct()
 	{
 		$this->load->database();
+		// $this->load->session();
 	}
 
 	public function gets(){
@@ -28,6 +29,10 @@ class Data_user extends CI_Model
 			'fullname' => $fullname,
 			'level' => $level);
 		$this->db->insert("user", $data);
+	}
+
+	public function cek_login($where){
+		return $this->db->get_where("user",$where);
 	}
 
 	public function del($id){

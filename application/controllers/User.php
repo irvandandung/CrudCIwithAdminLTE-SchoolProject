@@ -11,6 +11,7 @@ class User extends CI_Controller
 		//$this->load->helper("url");
 		$this->load->model("Data_user");
 		//var_dump($this->Data_user->gets());
+		
 	}
 
 	public function index(){
@@ -40,8 +41,32 @@ class User extends CI_Controller
 		redirect('User');
 	}
 
+	public function melbu(){
+		$this->load->view('login');
+	}
+
 	public function go_login(){
-		$this->load->view("login");
+		// $username = $this->input->post('username');
+  //       $password = $this->input->post('password');
+  //       $where = array(
+  //           'username' => $username,
+  //           'password' => md5($password)
+  //           );
+  //       $cek = $this->m_login->cek_login("user",$where)->num_rows();
+  //       if($cek > 0){
+ 
+  //           $data_session = array(
+  //               'nama' => $username,
+  //               'status' => "login"
+  //               );
+ 
+  //           $this->session->set_userdata($data_session);
+ 
+            redirect('user');
+ 
+        // }else{
+        //     echo "Username dan password salah !";
+        // }
 	}
 
 	public function del($id){
